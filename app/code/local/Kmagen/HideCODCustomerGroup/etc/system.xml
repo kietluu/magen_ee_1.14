@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <kmagen translate="label">
+            <label>Kmagen</label>
+            <sort_order>300</sort_order>
+        </kmagen>
+    </tabs>
+    <sections>
+        <paymentfilter translate="label" module="kmagen_hidecodcustomergroup">
+            <label>Hide Payment Method COD</label>
+            <tab>kmagen</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <export_invoice translate="label">
+                    <label>Hide Payment Method For Group Customer</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <specificgroup translate="label">
+                            <label>Customer Groups</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>49</sort_order>
+                            <source_model>kmagen_hidecodcustomergroup/system_config_customergroups</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                        </specificgroup>
+                    </fields>
+                </export_invoice>
+            </groups>
+        </paymentfilter>
+    </sections>
+</config>
