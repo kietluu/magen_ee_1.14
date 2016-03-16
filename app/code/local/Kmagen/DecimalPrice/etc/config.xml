@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Kmagen_DecimalPrice>
+			<version>0.1.0</version>
+		</Kmagen_DecimalPrice>
+	</modules>
+	<global>
+		<helpers>
+			<decimalprice>
+				<class>Kmagen_DecimalPrice_Helper</class>
+			</decimalprice>
+		</helpers>
+		<models>
+			<decimalprice>
+				<class>Kmagen_DecimalPrice_Model</class>
+			</decimalprice>
+			<directory>
+				<rewrite>
+					<currency>Kmagen_DecimalPrice_Model_Directory_Currency</currency>
+				</rewrite>
+			</directory>
+			<core>
+				<rewrite>
+					<store>Kmagen_DecimalPrice_Model_Core_Store</store>
+				</rewrite>
+			</core>
+		</models>
+	</global>
+</config> 
